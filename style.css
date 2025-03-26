@@ -1,0 +1,57 @@
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 1em 2em; /* Ajuste del padding */
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.menu a:hover {
+    background-color: #8c732c;
+}
+
+.menu ul li {
+    position: relative; /* Necesario para el submenú */
+    width:100%;/* asegura que cada elemento ocupe el 100% del ancho*/	
+}
+.menu ul li ul {
+    display: none;
+    position: absolute; /* Posiciona el submenú */
+    top: 100%; /* Muestra el submenú debajo del elemento padre */
+    left: 0;
+    padding: 0; /* Elimina padding del submenú */
+    margin: 0;
+    list-style: none;
+    background-color: #F9B53C; /* Color de fondo del submenú */
+}
+
+.menu ul li:hover ul {
+    display: block; /* Muestra el submenú al pasar el mouse */
+    height: 100%; /*Se ajusta el tamaño al menu padre*/
+    width: 100%; /*Se ajusta al tamaño del menu padre*/
+}
+
+.menu ul li ul li a {
+    padding: 1em 2em;
+}
+/*Estilo Para Pantallas Pequeñas(menos de 768px)*/
+@media(max-width:768px){
+.menuCSS3 ul{
+	flex-direction: column;/*cambia le direccion del menu columna*/
+}
+.menuCSS3 ul li{
+	width:100%;/* asegura que cada elemento ocupe el 100% del ancho*/
+}
+.menuCSS3 a {
+	padding: 1em;/*mantiene el tamaño adecuado*/
+	text-align: center;/* centra el texto de los elementos del menu*/
+}
+}
